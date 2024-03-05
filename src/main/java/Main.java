@@ -16,17 +16,16 @@ public class Main {
         int number = 1 + (int) (100 * Math.random());
         // number of tries
         int tries = 5;
-        //guess value
-        int i, guess;
+
 
         System.out.println("Guess a number between 1 and 100 in 5 tries");
         //Iterate over the tries
-        for (i = 0; i < tries; i++) {
+        for (int i = 0; i < tries; i++) {
             System.out.println("Guess the number");
 
 
             //scanner input for the guess
-            guess = input.nextInt();
+            int guess = input.nextInt();
 
             //if the number is guessed
             if (number == guess) {
@@ -36,8 +35,8 @@ public class Main {
                 System.out.println("Number is less than guess");
             } else if (number > guess && i != tries - 1) {
                 System.out.println("Number is more than guess");
-            }else if (i == guess) {
-                System.out.println("No more tries");
+            }else{
+                System.out.println("Game Over");
                 System.out.println("Number was " + number);
             }
         }
